@@ -109,7 +109,7 @@
     <alias name="TextNormal" font="FHD" size="30" height="50" />
     <alias name="FileList" font="FHD" size="30" height="50" />
     <alias name="FileListMulti" font="FHD" size="30" height="50" />
-    <alias name="PluginBrowser0" font="FHD" size="32" height="80" />
+    <alias name="PluginBrowser0" font="FHD" size="30" height="80" />
     <alias name="PluginBrowser1" font="Regular" size="24" />
     <alias name="ServiceInfo" font="FHD" size="30" height="45" />
     <alias name="SelectionList" font="FHD" size="30" height="50" />
@@ -172,6 +172,12 @@
     <parameter name="ChoicelistDash" value="0, 3, 1000, 50" />
     <parameter name="ChoicelistName" value="85, 3, 1000, 50" />
     <parameter name="ChoicelistNameSingle" value="5, 5, 1400, 50" />
+	<parameter name="PluginBrowserIcon" value="15,11,150,60" /> 
+    <parameter name="PluginBrowserName" value="180,5,45" /> 
+    <parameter name="PluginBrowserDescr" value="180,42,30" /> 
+    <parameter name="PluginBrowserDownloadIcon" value="15,0,90,83" /> 
+    <parameter name="PluginBrowserDownloadName" value="120,5,45" /> 
+    <parameter name="PluginBrowserDownloadDescr" value="120,42,30" /> 
     <parameter name="ChoicelistIcon" value="10, 4, 64, 50" />
     <parameter name="ExpandableListIcon" value="0, 0, 55, 38" />
     <parameter name="ExpandableListDescr" value="55, 2, 1000, 45" />
@@ -271,9 +277,9 @@
     <eLabel backgroundColor="blue_light" name="InfoBar" position="28,1078" size="289,2" zPosition="-9" />
     <!-- Widget -->
     <widget source="session.CurrentService" render="ChannelNumber" backgroundColor="OE_Background" foregroundColor="OE_Foreground" font="RegularBold;37" position="1036,784" size="110,55" transparent="1" halign="right" valign="center" zPosition="1" />
-    <widget source="session.CurrentService" render="Label" position="318,773" size="850,77" font="RegularBold; 40" noWrap="1" backgroundColor="OE_NewBg" transparent="0" halign="left" valign="center" foregroundColor="OE_Yellow">
-      <convert type="ServiceName">Name</convert>
-    </widget>
+    <widget source="session.CurrentService" render="Label" position="318,773" size="850,77" font="RegularBold; 42" noWrap="1" backgroundColor="OE_NewBg" transparent="0" halign="left" valign="center">
+  <convert type="ServiceName">Name</convert>
+</widget>
     <widget source="session.CurrentService" render="Label" font="RegularBold;24" backgroundColor="OE_Background" foregroundColor="OE_Foreground" position="330,871" size="730,28" transparent="1" zPosition="1">
       <convert type="PliExtraInfo">TransponderInfo</convert>
     </widget>
@@ -544,8 +550,8 @@
       <convert type="EventName">ExtendedDescription</convert>
     </widget>
     <widget source="session.Event_Next" options="movetype=running,startpoint=0,direction=top,steptime=100,startdelay=4000,wrap,always=0" render="RunningText" position="665,690" size="1020,260" font="Regular;34" zPosition="1" backgroundColor="OE_NewBg" transparent="1" halign="left" foregroundColor="OE_Accent2">
-  <convert type="EventName">ExtendedDescription</convert>
-</widget>
+      <convert type="EventName">ExtendedDescription</convert>
+    </widget>
     <!-- CryptoInfo -->
     <widget source="session.CurrentService" render="Label" font="FHD;24" position="475,1007" size="1210,45" zPosition="50" backgroundColor="OE_NewBg" transparent="0" noWrap="1" valign="center" halign="left" foregroundColor="white">
       <convert type="CaidInfo2" />
