@@ -103,7 +103,7 @@
     <font filename="/usr/share/fonts/OpenSans-Regular.ttf" name="RegularLight" scale="95" />
     <font filename="/usr/share/fonts/OpenSans-Regular.ttf" name="EL_Standard" scale="100" />
     <font filename="/usr/share/fonts/segoe-ui-bold.ttf" name="FHD" scale="100" />
-    <font filename="/usr/share/fonts/OpenSans-Bold.ttf" name="RegularBold" scale="100" />
+    <font filename="/usr/share/fonts/Roboto-Regular.ttf" name="RegularBold" scale="100" />
     <alias name="ChoiceList" font="RegularBold" size="25" height="45" />
     <alias name="Body" font="FHD" size="30" height="50" />
     <alias name="TextNormal" font="FHD" size="30" height="50" />
@@ -172,12 +172,12 @@
     <parameter name="ChoicelistDash" value="0, 3, 1000, 50" />
     <parameter name="ChoicelistName" value="85, 3, 1000, 50" />
     <parameter name="ChoicelistNameSingle" value="5, 5, 1400, 50" />
-	<parameter name="PluginBrowserIcon" value="15,11,150,60" /> 
-    <parameter name="PluginBrowserName" value="180,5,45" /> 
-    <parameter name="PluginBrowserDescr" value="180,42,30" /> 
-    <parameter name="PluginBrowserDownloadIcon" value="15,0,90,83" /> 
-    <parameter name="PluginBrowserDownloadName" value="120,5,45" /> 
-    <parameter name="PluginBrowserDownloadDescr" value="120,42,30" /> 
+    <parameter name="PluginBrowserIcon" value="15,11,150,60" />
+    <parameter name="PluginBrowserName" value="180,5,45" />
+    <parameter name="PluginBrowserDescr" value="180,42,30" />
+    <parameter name="PluginBrowserDownloadIcon" value="15,0,90,83" />
+    <parameter name="PluginBrowserDownloadName" value="120,5,45" />
+    <parameter name="PluginBrowserDownloadDescr" value="120,42,30" />
     <parameter name="ChoicelistIcon" value="10, 4, 64, 50" />
     <parameter name="ExpandableListIcon" value="0, 0, 55, 38" />
     <parameter name="ExpandableListDescr" value="55, 2, 1000, 45" />
@@ -277,7 +277,7 @@
     <eLabel backgroundColor="blue_light" name="InfoBar" position="28,1078" size="289,2" zPosition="-9" />
     <!-- Widget -->
     <widget source="session.CurrentService" render="ChannelNumber" backgroundColor="OE_Background" foregroundColor="OE_Foreground" font="RegularBold;37" position="1036,784" size="110,55" transparent="1" halign="right" valign="center" zPosition="1" />
-    <widget source="session.CurrentService" render="Label" position="318,773" size="850,77" font="RegularBold; 42" noWrap="1" backgroundColor="OE_NewBg" transparent="0" halign="left" valign="center">
+    <widget source="session.CurrentService" render="Label" position="318,773" size="850,77" font="RegularBold; 44" noWrap="1" backgroundColor="OE_NewBg" transparent="0" halign="left" valign="center">
   <convert type="ServiceName">Name</convert>
 </widget>
     <widget source="session.CurrentService" render="Label" font="RegularBold;24" backgroundColor="OE_Background" foregroundColor="OE_Foreground" position="330,871" size="730,28" transparent="1" zPosition="1">
@@ -546,10 +546,10 @@
       <convert type="ValueRange">1921,3841</convert>
       <convert type="ConditionalShowHide" />
     </widget>
-    <widget source="session.Event_Now" options="movetype=running,startpoint=0,direction=top,steptime=100,startdelay=4000,wrap,always=0" render="RunningText" position="665,237" size="1020,388" font="Regular;34" zPosition="1" backgroundColor="OE_NewBg" transparent="1" halign="left">
-      <convert type="EventName">ExtendedDescription</convert>
-    </widget>
-    <widget source="session.Event_Next" options="movetype=running,startpoint=0,direction=top,steptime=100,startdelay=4000,wrap,always=0" render="RunningText" position="665,690" size="1020,260" font="Regular;34" zPosition="1" backgroundColor="OE_NewBg" transparent="1" halign="left" foregroundColor="OE_Accent2">
+    <widget source="session.Event_Now" options="movetype=running,startpoint=0,direction=top,steptime=100,startdelay=4000,wrap,always=0" render="RunningText" position="665,235" size="1020,388" font="Regular;34" zPosition="1" backgroundColor="OE_NewBg" transparent="1" halign="center">
+  <convert type="EventName">ExtendedDescription</convert>
+</widget>
+    <widget source="session.Event_Next" options="movetype=running,startpoint=0,direction=top,steptime=100,startdelay=4000,wrap,always=0" render="RunningText" position="666,688" size="1020,260" font="Regular;34" zPosition="1" backgroundColor="OE_NewBg" transparent="1" halign="center" foregroundColor="OE_Accent2">
       <convert type="EventName">ExtendedDescription</convert>
     </widget>
     <!-- CryptoInfo -->
@@ -666,7 +666,7 @@
   <!-- MEMORY INFO -->
   <screen name="MemoryInfo" title="MemoryInfo" position="0,0" size="1920,1080" backgroundColor="transparent" flags="wfNoBorder">
     <panel name="About_standard" />
-    <widget name="params" rowsincolumn="25" />
+    <widget name="params" rowsincolumn="25" backgroundColor="OE_ListBackground" />
     <widget name="lmemtext" position="595,140" backgroundColor="OE_NewBg2" foregroundColor="white" size="225,855" zPosition="7" font="FHD;24" halign="right" transparent="1" />
     <widget name="lmemvalue" position="830,140" backgroundColor="OE_Background" foregroundColor="OE_Foreground" size="230,855" zPosition="8" font="FHD;24" halign="left" transparent="1" />
     <widget name="slide" borderWidth="2" borderColor="OE_Blue" backgroundColor="OE_Background" foregroundColor="green_light" position="410,160" zPosition="4" size="40,750" transparent="1" />
@@ -937,12 +937,12 @@
     <widget backgroundColor="blue_light" borderWidth="0" pixmap="colors/00A4C400.png" position="50,365" render="Progress" size="600,5" source="ServiceEvent" transparent="0" zPosition="1">
       <convert type="EventTime">Progress</convert>
     </widget>
-    <widget backgroundColor="OE_NewBg2" font="RegularBold;30" halign="left" position="50,375" options="movetype=running,startpoint=0,direction=top,steptime=100,startdelay=4000,wrap,always=0" render="RunningText" size="600,355" source="ServiceEvent" transparent="1" valign="top">
+    <widget backgroundColor="OE_NewBg2" font="RegularBold;30" halign="center" position="50,375" options="movetype=running,startpoint=0,direction=top,steptime=100,startdelay=4000,wrap,always=0" render="RunningText" size="600,355" source="ServiceEvent" transparent="1" valign="top">
       <convert type="EventName">ExtendedDescription</convert>
     </widget>
     <widget source="ServiceEvent" render="NextEvents" position="50,745" size="610,330" noWrap="1" font="RegularBold;30" backgroundColor="OE_NewBg2" foregroundColor="OE_Green" transparent="1" zPosition="5">
-      <convert type="ServiceName">Reference</convert>
-    </widget>
+  <convert type="ServiceName">Reference</convert>
+</widget>
     <!-- Button -->
     <ePixmap alphatest="blend" pixmap="buttons/key_text.png" position="1665,970" size="64,43" />
     <ePixmap alphatest="blend" pixmap="buttons/key_menu.png" position="1730,970" size="64,43" />
@@ -3264,7 +3264,7 @@
     <widget name="arrowdown2" pixmap="arrowdown.png" position="-100,-100" size="37,70" alphatest="blend" zPosition="11" />
     <widget name="arrowup" pixmap="arrowup.png" position="-100,-100" size="37,70" alphatest="blend" zPosition="11" />
     <widget name="arrowup2" pixmap="arrowup.png" position="-100,-100" size="37,70" alphatest="blend" zPosition="11" />
-    <widget name="wizard" pixmap="picon_default.png" position="105,25" size="220,132" alphatest="blend" zPosition="10" />
+    <widget name="wizard" pixmap="picon_default.png" position="103,17" size="220,132" alphatest="blend" zPosition="10" />
     <!-- Buttons-->
     <eLabel backgroundColor="white" name="" position="380,470" size="1300,2" zPosition="-9" />
     <ePixmap alphatest="blend" pixmap="buttons/key_red.png" position="70,950" size="40,40" />
@@ -3322,7 +3322,7 @@
     <widget name="arrowdown2" pixmap="arrowdown.png" position="-100,-100" size="37,70" alphatest="blend" zPosition="11" />
     <widget name="arrowup" pixmap="arrowup.png" position="-100,-100" size="37,70" alphatest="blend" zPosition="11" />
     <widget name="arrowup2" pixmap="arrowup.png" position="-100,-100" size="37,70" alphatest="blend" zPosition="11" />
-    <widget name="wizard" pixmap="picon_default.png" position="105,25" size="220,132" alphatest="blend" zPosition="10" />
+    <widget name="wizard" pixmap="picon_default.png" position="104,10" size="220,132" alphatest="blend" zPosition="10" />
     <!-- Buttons-->
     <eLabel backgroundColor="white" name="" position="380,470" size="1300,2" zPosition="-9" />
     <ePixmap alphatest="blend" pixmap="buttons/key_red.png" position="70,950" size="40,40" />
@@ -3455,7 +3455,7 @@
   </screen>
   <!-- OPKG UPDATER -->
   <screen name="InstallWizardOpkgUpdater" position="fill" backgroundColor="OE_NewBg2" flags="wfNoBorder">
-    <ePixmap alphatest="blend" pixmap="picon_default.png" position="827,151" size="220,132" transparent="1" zPosition="10" />
+    <ePixmap alphatest="blend" pixmap="picon_default.png" position="837,564" size="220,132" transparent="1" zPosition="10" />
     <ePixmap pixmap="icons/input_info.png" position="900,315" size="80,80" alphatest="blend" />
     <widget source="statusbar" render="Label" font="RegularBold;27" backgroundColor="OE_Background" position="585,420" size="720,150" transparent="1" halign="center" valign="center" />
   </screen>
@@ -3957,7 +3957,7 @@
     <panel name="description_standard" />
     <ePixmap alphatest="blend" pixmap="buttons/key_help.png" position="48,960" size="64,43" />
     <widget name="preview" position="1489,306" size="400,400" alphatest="blend" />
-    <widget source="skins" render="Listbox" position="140,140" size="1300,710" enableWrapAround="1" scrollbarMode="showOnDemand" scrollbarSliderForegroundColor="blue_light">
+    <widget source="skins" render="Listbox" position="140,140" size="1300,710" enableWrapAround="1" scrollbarMode="showOnDemand" scrollbarSliderForegroundColor="blue_light" backgroundColor="OE_Background" transparent="0">
       <convert type="TemplatedMultiContent">
 	{
 	"template": [
@@ -4343,7 +4343,7 @@
   <!-- ********** EVENT********** -->
   <screen name="HistoryZapEventSkinFullHD" position="fill" flags="wfNoBorder">
     <panel name="StanDardScreen" />
-    <widget source="menu" render="Listbox" position="140,140" size="1300,780" scrollbarMode="showOnDemand" scrollbarSliderForegroundColor="blue_light">
+    <widget source="menu" render="Listbox" position="140,140" size="1300,780" scrollbarMode="showOnDemand" scrollbarSliderForegroundColor="blue_light" backgroundColor="OE_Background" transparent="0">
       <convert type="TemplatedMultiContent">
 				{"template": [
 					MultiContentEntryText(pos = (10, 11), size = (30, 20), font = 2, color = 0x00ffc000, color_sel = 0x00ffc000, flags = RT_HALIGN_CENTER | RT_VALIGN_CENTER, text = 1),
@@ -4365,7 +4365,7 @@
   <!-- ********** PICON+EVENT********** -->
   <screen name="HistoryZapEventPiconSkinFullHD" position="fill" flags="wfNoBorder">
     <panel name="StanDardScreen" />
-    <widget source="menu" render="Listbox" position="140,140" size="1300,800" scrollbarMode="showOnDemand" scrollbarSliderForegroundColor="blue_light">
+    <widget source="menu" render="Listbox" position="140,140" size="1300,800" scrollbarMode="showOnDemand" scrollbarSliderForegroundColor="blue_light" backgroundColor="OE_Background" transparent="0">
       <convert type="TemplatedMultiContent">
 				{"template": [
 					MultiContentEntryText(pos = (85, 25), size = (30, 20), font = 2,	 color = 0x00ffc000, color_sel = 0x00ffc000, flags = RT_HALIGN_CENTER | RT_VALIGN_CENTER, text = 1),
@@ -4388,7 +4388,7 @@
   <!-- ********** EVENT+MINUTES REMAININGS********** -->
   <screen name="HistoryZapEventDurationSkinFullHD" position="fill" flags="wfNoBorder">
     <panel name="StanDardScreen" />
-    <widget source="menu" render="Listbox" position="140,140" size="1300,800" scrollbarMode="showOnDemand" scrollbarSliderForegroundColor="blue_light">
+    <widget source="menu" render="Listbox" position="140,140" size="1300,800" scrollbarMode="showOnDemand" scrollbarSliderForegroundColor="blue_light" backgroundColor="OE_Background" transparent="0">
       <convert type="TemplatedMultiContent">
 				{"template": [
 					MultiContentEntryText(pos = (0, 5), size = (25, 20), font = 2, color = 0x00ffc000, color_sel = 0x00ffc000, flags = RT_HALIGN_CENTER | RT_VALIGN_CENTER, text = 1),
@@ -4411,7 +4411,7 @@
   <!-- ********** EVENT+BARPROGRESS********** -->
   <screen name="HistoryZapEventDurationBarSkinFullHD" position="fill" flags="wfNoBorder">
     <panel name="StanDardScreen" />
-    <widget source="menu" render="Listbox" position="140,140" size="1300,800" scrollbarMode="showOnDemand" scrollbarSliderForegroundColor="blue_light">
+    <widget source="menu" render="Listbox" position="140,140" size="1300,800" scrollbarMode="showOnDemand" scrollbarSliderForegroundColor="blue_light" backgroundColor="OE_Background" transparent="0">
       <convert type="TemplatedMultiContent">
 				{"template": [
 					MultiContentEntryText(pos = (0, 5), size = (25, 20), font = 2, color = 0x00ffc000, color_sel = 0x00ffc000, flags = RT_HALIGN_CENTER | RT_VALIGN_CENTER, text = 1),
@@ -4435,7 +4435,7 @@
   <!-- ********** PICON+EVENT+TIME REMAINING********** -->
   <screen name="HistoryZapEventDurationPiconSkinFullHD" position="fill" flags="wfNoBorder">
     <panel name="StanDardScreen" />
-    <widget source="menu" render="Listbox" position="140,140" size="1300,800" scrollbarMode="showOnDemand" scrollbarSliderForegroundColor="blue_light">
+    <widget source="menu" render="Listbox" position="140,140" size="1300,800" scrollbarMode="showOnDemand" scrollbarSliderForegroundColor="blue_light" backgroundColor="OE_Background" transparent="0">
       <convert type="TemplatedMultiContent">
 				{"template": [
 					MultiContentEntryText(pos = (80, 5), size = (25, 20), font = 2, color = 0x00ffc000, color_sel = 0x00ffc000, flags = RT_HALIGN_CENTER | RT_VALIGN_CENTER, text = 1),
@@ -4459,7 +4459,7 @@
   <!-- ********** PICON+EVENT+BAR PROGRESS+PERCENTAGE ********** -->
   <screen name="HistoryZapEventDurationPiconBarSkinFullHD" position="fill" flags="wfNoBorder">
     <panel name="StanDardScreen" />
-    <widget source="menu" render="Listbox" position="140,140" size="1300,800" scrollbarMode="showOnDemand" scrollbarSliderForegroundColor="blue_light">
+    <widget source="menu" render="Listbox" position="139,140" size="1300,800" scrollbarMode="showOnDemand" scrollbarSliderForegroundColor="blue_light" backgroundColor="OE_Background" transparent="0">
       <convert type="TemplatedMultiContent">
 				{"template": [
 					MultiContentEntryText(pos = (80, 3), size = (25, 40), font = 2, color = 0x00ffc000, color_sel = 0x00ffc000, flags = RT_HALIGN_CENTER | RT_VALIGN_CENTER, text = 1),
@@ -4484,7 +4484,7 @@
   <!-- ********** EVENT+DESCRIPTION********** -->
   <screen name="HistoryZapDescriptionSkinFullHD" position="fill" flags="wfNoBorder">
     <panel name="StanDardScreen" />
-    <widget source="menu" render="Listbox" position="140,140" size="1300,820" scrollbarMode="showOnDemand" scrollbarSliderForegroundColor="blue_light">
+    <widget source="menu" render="Listbox" position="140,140" size="1300,820" scrollbarMode="showOnDemand" scrollbarSliderForegroundColor="blue_light" backgroundColor="OE_Background" transparent="0">
       <convert type="TemplatedMultiContent">
 				{"template": [
 					MultiContentEntryText(pos = (0, 5), size = (25, 20), font = 2, color = 0x00ffc000, color_sel = 0x00ffc000, flags = RT_HALIGN_CENTER | RT_VALIGN_CENTER, text = 1),
@@ -4507,7 +4507,7 @@
   <!-- ********** EVENT+DESCRIPTION+TIME REMAINING********** -->
   <screen name="HistoryZapDescriptionDurationSkinFullHD" position="fill" flags="wfNoBorder">
     <panel name="StanDardScreen" />
-    <widget source="menu" render="Listbox" position="140,140" size="1300,820" scrollbarMode="showOnDemand" scrollbarSliderForegroundColor="blue_light">
+    <widget source="menu" render="Listbox" position="140,140" size="1300,820" scrollbarMode="showOnDemand" scrollbarSliderForegroundColor="blue_light" backgroundColor="OE_Background" transparent="0">
       <convert type="TemplatedMultiContent">
 				{"template": [
 					MultiContentEntryText(pos = (0, 5), size = (25, 20), font = 2, color = 0x00ffc000, color_sel = 0x00ffc000, flags = RT_HALIGN_CENTER | RT_VALIGN_CENTER, text = 1),
@@ -4531,7 +4531,7 @@
   <!-- ********** EVENT+BAR PROGRESS+PERCENTAGE+DESCRIPTION********** -->
   <screen name="HistoryZapDescriptionDurationBarSkinFullHD" position="fill" flags="wfNoBorder">
     <panel name="StanDardScreen" />
-    <widget source="menu" render="Listbox" position="140,140" size="1300,820" scrollbarMode="showOnDemand" scrollbarSliderForegroundColor="blue_light">
+    <widget source="menu" render="Listbox" position="140,140" size="1300,820" scrollbarMode="showOnDemand" scrollbarSliderForegroundColor="blue_light" backgroundColor="OE_Background" transparent="0">
       <convert type="TemplatedMultiContent">
 				{"template": [
 					MultiContentEntryText(pos = (0, 5), size = (25, 20), font = 2, color = 0x00ffc000, color_sel = 0x00ffc000, flags = RT_HALIGN_CENTER | RT_VALIGN_CENTER, text = 1),
@@ -4556,7 +4556,7 @@
   <!-- ********** PICON+EVENT+DESCRIPTION********** -->
   <screen name="HistoryZapDescriptionPiconSkinFullHD" position="fill" flags="wfNoBorder">
     <panel name="StanDardScreen" />
-    <widget source="menu" render="Listbox" position="140,140" size="1300,820" scrollbarMode="showOnDemand" scrollbarSliderForegroundColor="blue_light">
+    <widget source="menu" render="Listbox" position="140,140" size="1300,820" scrollbarMode="showOnDemand" scrollbarSliderForegroundColor="blue_light" backgroundColor="OE_Background" transparent="0">
       <convert type="TemplatedMultiContent">
 				{"template": [
 					MultiContentEntryText(pos = (60, 5), size = (25, 20), font = 2, color = 0x00ffc000, color_sel = 0x00ffc000, flags = RT_HALIGN_CENTER | RT_VALIGN_CENTER, text = 1),
@@ -4580,7 +4580,7 @@
   <!-- **********EVENT+REMAINING+DESCRIPTION+PICON********** -->
   <screen name="HistoryZapDescriptionDurationPiconSkinFullHD" position="fill" flags="wfNoBorder">
     <panel name="StanDardScreen" />
-    <widget source="menu" render="Listbox" position="140,140" size="1300,820" scrollbarMode="showOnDemand" scrollbarSliderForegroundColor="blue_light">
+    <widget source="menu" render="Listbox" position="140,140" size="1300,820" scrollbarMode="showOnDemand" scrollbarSliderForegroundColor="blue_light" backgroundColor="OE_Background" transparent="0">
       <convert type="TemplatedMultiContent">
 				{"template": [
 					MultiContentEntryText(pos = (60, 5), size = (25, 20), font = 2, color = 0x00ffc000, color_sel = 0x00ffc000, flags = RT_HALIGN_CENTER | RT_VALIGN_CENTER, text = 1),
@@ -4605,7 +4605,7 @@
   <!-- ********** PICON+EVENT+BAR PROGRESS+PERCENTAGE+DESCRIPTION********** -->
   <screen name="HistoryZapDescriptionDurationBarPiconSkinFullHD" position="fill" flags="wfNoBorder">
     <panel name="StanDardScreen" />
-    <widget source="menu" render="Listbox" position="140,140" size="1300,820" scrollbarMode="showOnDemand" scrollbarSliderForegroundColor="blue_light">
+    <widget source="menu" render="Listbox" position="138,140" size="1300,820" scrollbarMode="showOnDemand" scrollbarSliderForegroundColor="blue_light" backgroundColor="OE_Background" transparent="0">
       <convert type="TemplatedMultiContent">
 				{"template": [
 					MultiContentEntryText(pos = (57, 5), size = (25, 20), font = 2, color =0x00ffc000, color_sel = 0x00ffc000, flags = RT_HALIGN_CENTER | RT_VALIGN_CENTER, text = 1),
@@ -4631,7 +4631,7 @@
   <!-- ********** ####### SETUP HISTORY ZAP ####### ********** -->
   <screen name="SetupZapSelectorScreen" position="fill" flags="wfNoBorder">
     <panel name="StanDardScreen" />
-    <widget name="config" itemHeight="50" position="140,140" size="1300,800" font="RegularBold;26" scrollbarMode="showOnDemand" scrollbarSliderForegroundColor="blue_light" transparent="1" />
+    <widget name="config" itemHeight="50" position="138,140" size="1300,800" font="RegularBold;26" scrollbarMode="showOnDemand" scrollbarSliderForegroundColor="blue_light" backgroundColor="OE_Background" transparent="0" />
     <widget position="220,965" size="270,70" name="cancel" font="RegularBold;24" halign="left" valign="center" backgroundColor="OE_Background" transparent="1" zPosition="2" />
     <widget position="550,965" size="270,70" name="ok" font="RegularBold;24" halign="left" valign="center" backgroundColor="OE_Background" transparent="1" zPosition="2" />
     <widget position="880,965" size="270,70" name="clear" font="RegularBold;24" halign="left" valign="center" backgroundColor="OE_Background" transparent="1" zPosition="2" />
